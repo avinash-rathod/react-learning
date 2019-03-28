@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter } from 'react-router-dom';
+
 import './App.css';
+import LayoutContainer from './LayoutContainer';
+
+/**
+ * Develop an application which has following features
+ * 1. Routing
+ * 2. Login page with validation
+ * 3. Dashboard with top tab menu
+ * 4. Google map
+ * 5. Google Analytics
+ * 6. Facebook login integration
+ * 7. Google login integration
+ */
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+       <LayoutContainer />
+      </BrowserRouter>
     );
   }
 }
